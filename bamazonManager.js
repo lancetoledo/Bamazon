@@ -16,12 +16,22 @@ connection.connect(function(err){
 });
 
 function runManager(){
-    inquirer.prompt([
-        {
-            name: ""
-            type:
-            message:
+    inquirer.prompt([{
+            type: "options",
+            name: "operator",
+            message: "What would you like to do today?",
+            choices: [
+                "View Products For Sale",
+                "View Low Inventory",
+                "Add To Inventory",
+                "Add New Product",
+            ]        
+    }])
 
-        }
-    ])
+    .then(function(response){
+        var choice = response.operator;
+        console.log(operator);
+    })
 }
+
+runManager()
