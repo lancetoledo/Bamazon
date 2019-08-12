@@ -20,12 +20,7 @@ function runManager(){
             type: "options",
             name: "operator",
             message: "What would you like to do today?",
-            choices: [
-                "View Products For Sale",
-                "View Low Inventory",
-                "Add To Inventory",
-                "Add New Product",
-            ]        
+            choices: ["View Products For Sale", "View Low Inventory", "Add To Inventory","Add New Product"]        
     }])
 
     .then(function(response){
